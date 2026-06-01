@@ -1,4 +1,4 @@
-import { tasks } from "../models/mockTasks.js";
+import { tasks } from "../../v1/models/mockTasks.js";
 
 // GET
 export const getAllTasks = (req, res) => {
