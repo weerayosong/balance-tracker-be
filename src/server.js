@@ -1,12 +1,14 @@
 import express from "express";
 import cors from "cors";
+import { connectDB } from "./config/db.js";
 
 import v1Routes from "./api/v1/index.js";
 import v2Routes from "./api/v2/index.js";
 
 const app = express();
-
 const PORT = process.env.PORT || 3002;
+
+connectDB();
 
 app.use(cors());
 app.use(express.json());

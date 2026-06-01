@@ -1,0 +1,49 @@
+@baseUrl = http://localhost:3002/api/v2
+
+### 1. GET
+GET {{baseUrl}}/tasks
+
+### 2. POST: work
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Learn React Context API",
+  "desc": "Study how to manage global state in React without Redux.",
+  "category": "Development",
+  "date": "2026-06-01",
+  "time": "14:00",
+  "duration": 2,
+  "energy": 4,
+  "priority": "high"
+}
+
+### 3. POST: routine
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Buy Groceries for Meal Prep",
+  "desc": "Chicken breast, broccoli, and brown rice.",
+  "category": "Health & Routine",
+  "date": "2026-06-02",
+  "time": "18:30",
+  "duration": 1,
+  "energy": 2,
+  "priority": "normal",
+  "color": "#10b981"
+}
+
+### 4. PUT
+@taskId = 6a1d65da2b5042ec8029eaa0
+
+PUT {{baseUrl}}/tasks/{{taskId}}
+Content-Type: application/json
+
+{
+  "completed": true,
+  "status": "archived"
+}
+
+### 5. DELETE
+DELETE {{baseUrl}}/tasks/{{taskId}}

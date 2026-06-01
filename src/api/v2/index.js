@@ -1,14 +1,14 @@
 import express from "express";
-// import taskRoutes from './routes/taskRoutes.js';
+import taskRoutes from "./routes/taskRoutes.js";
 
 const router = express.Router();
 
 router.get("/status", (req, res) => {
     res.json({
-        message: "Welcome to V2 API (MongoDB Integration in progress)",
+        message: "V2 API (MongoDB done!)",
     });
 });
 
-// router.use('/tasks', taskRoutes);
+router.use("/tasks", taskRoutes);
 
 export default router;
