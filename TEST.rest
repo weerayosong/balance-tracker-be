@@ -1,0 +1,25 @@
+### 1. GET All
+GET http://localhost:3002/api/v1/tasks
+
+### 2. POST
+POST http://localhost:3002/api/v1/tasks
+Content-Type: application/json
+
+{
+  "title": "Test Backend Connection",
+  "desc": "Testing POST method with Express",
+  "category": "Development",
+  "energy": 4,
+  "color": "#ef4444"
+}
+
+### 3. PUT
+PUT http://localhost:3002/api/v1/tasks/1
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### 4. DELETE
+DELETE http://localhost:3002/api/v1/tasks/6
